@@ -9,18 +9,26 @@ public class ExerciseOne {
         try{
             Integer a  = sc.nextInt();
             Integer b = sc.nextInt();
-            try{
-                int c = a/b;
-                int d = a%b;
-                System.out.println("Ededin Qismeti: "+c);
-                System.out.println("Qaliq Hisse: "+d);
-
-            }catch (Exception e){
-                System.out.println("Bolen 0 ola bilmez");
-            }
-        }catch (Exception e){
+//            try{
+//
+//
+//            }catch (Exception e){
+//                System.out.println("Bolen 0 ola bilmez");
+//            }
+            int c = a/b;
+            int d = a%b;
+            System.out.println("Ededin Qismeti: "+c);
+            System.out.println("Qaliq Hisse: "+d);
+        }
+        catch (ArithmeticException e){
+            System.out.println("Bolen 0 ola bilmez");
+            System.out.println(e);
+        }
+        catch (Exception e){
             System.out.println("Tip Yanlisdir");
-        }finally {
+            System.out.println(e);
+        }
+        finally {
             System.out.println();
 
             System.out.println("Emeliyyat basa catdi");
